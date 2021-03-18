@@ -39,6 +39,7 @@ sed -i "s/AllowOverride None/AllowOverride All/g" /etc/apache2/apache2.conf
 
 rm -rf /var/www/html
 ln -fs /vagrant/public /var/www/html
+sudo ln -s /usr/share/phpmyadmin /var/www/phpmyadmin
 
 sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php5/apache2/php.ini
 sed -i "s/display_errors = .*/display_errors = On/" /etc/php5/apache2/php.ini
